@@ -2,7 +2,7 @@ module.exports = {
 
     build(currentResourceCount, currentPage, pageSize, totalResourcesCount, basePath) {
 
-        data = {};
+        let data = {};
         data.current_items_count = currentResourceCount || 0;
         data.total_items_count = totalResourcesCount;
         data.offset = (currentPage - 1) * pageSize;

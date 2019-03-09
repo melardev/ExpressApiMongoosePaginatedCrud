@@ -17,7 +17,7 @@
       - [The next come are](#the-next-come-are-2)
     + [Client side implementations](#client-side-implementations-2)
       - [The next come are](#the-next-come-are-3)
-- [Follow me](#follow-me)
+- [Follow me](#social-media-links)
     
 # Introduction
 This is a project mean to be used for learning basic CRUD operations and Pagination using
@@ -136,7 +136,7 @@ This client side E-commerce application is also implemented using other client s
 - Ember
 - Vanilla javascript
 
-# Follow me
+# Social media links
 - [Youtube Channel](https://youtube.com/melardev) I publish videos mainly on programming
 - [Blog](http://melardev.com) Sometimes I publish the source code there before Github
 - [Twitter](https://twitter.com/@melardev) I share tips on programming

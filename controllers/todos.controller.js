@@ -56,7 +56,7 @@ exports.getById = (req, res, next) => {
     Todo.findById(req.params.id).then(todo => {
         if (todo == null)
             return res.status(404).json(GenericResponseDto.buildWithErrorMessages('Todo not found'));
-        return res.json(TodoResponseDto.buildDetails(todo.toJSON()));
+        return res.json(GenericResponseDto.buildSuccessWithDtoAndMessages(TodoResponseDto.buildDetails(todo.toJSON())));
     }).catch(err => {
         return res.json(GenericResponseDto.buildWithErrorMessages(err.message));
     });
@@ -79,7 +79,10 @@ exports.update = function (req, res, next) {
         const {title, description, completed} = req.body;
 
         todo.title = title;
-        todo.set('description', description);
+
+        if (description != null)
+            todo.set('description', description);
+
         todo.set('completed', completed);
 
         todo.save().then(todo => {

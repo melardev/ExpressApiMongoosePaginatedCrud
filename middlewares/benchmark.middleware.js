@@ -6,6 +6,4 @@ exports.benchmark = (req, res, next) => {
         console.log('It took ' + elapsed + ' seconds');
     });
     next();
-    const elapsed = (new Date().getTime() - startTime) / 1000;
-    res.set('X-Perf-Time', elapsed);
 };

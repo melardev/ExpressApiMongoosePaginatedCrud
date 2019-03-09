@@ -40,6 +40,8 @@ function buildWithDtoAndMessages(success, response, messages) {
         response.full_messages = messages;
     else if (messages instanceof Object)
         response.full_messages = Object.values(messages);
+    else
+        response.full_messages = [];
 
     return response;
 }
